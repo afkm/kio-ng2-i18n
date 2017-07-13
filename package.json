@@ -1,0 +1,55 @@
+{
+	"name": "kio-ng2-i18n",
+	"version": "0.0.0",
+	"description": "",
+	"main": "./release",
+	"module": "./release/module.js",
+	"typings": "./release/module.d.ts",
+	"scripts": {
+		"test": "ts-mocha ./src/**/*.spec.ts",
+		"pretest": "npm run build",
+		"test:watch": "./scripts/watch.sh test",
+		"lint": "tslint ./src/**/*.ts ./test/**/*.ts",
+		"version": "npm run build",
+		"postversion": "git push && git push --tags",
+		"predoc": "rm -rf ./documentation",
+		"doc": "compodoc -p ./tsconfig-doc.json -d ./documentation/",
+		"transpile": "npm run ngModule:build",
+		"ngModule:build": "./scripts/ngModule.sh build",
+		"build": "npm run ngModule:build",
+		"sync": "./scripts/sync.sh",
+		"build:release": "NODE_ENV=production npm run build && npm run sync",
+		"build:release:watch": "./scripts/watch.sh build:release"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@dergoldenefoehn.de:/opt/git/kio-ng2-i18n.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@angular/compiler-cli": "^4.2.6",
+		"@compodoc/compodoc": "^1.0.0-beta.12",
+		"@types/chai": "^4.0.1",
+		"@types/mocha": "^2.2.41",
+		"@types/node": "^8.0.11",
+		"compodoc": "0.0.41",
+		"mocha": "^3.4.2",
+		"nodemon": "^1.11.0",
+		"ts-mocha": "^1.0.3",
+		"ts-node": "^3.2.0",
+		"tslint": "^5.5.0",
+		"typescript": "^2.4.1"
+	},
+	"dependencies": {
+		"@angular/common": "^4.2.6",
+		"@angular/compiler": "^4.2.6",
+		"@angular/core": "^4.2.6",
+		"@angular/platform-browser": "^4.2.6",
+		"@angular/platform-browser-dynamic": "^4.2.6",
+		"@types/showdown": "^1.4.32",
+		"rxjs": "^5.4.2",
+		"zone.js": "^0.8.13"
+	}
+}
