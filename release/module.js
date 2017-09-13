@@ -4,15 +4,17 @@ import { DEFAULT_LOCALE } from './injection/DefaultLocale.token';
 import { LOCALES } from './injection/Locale.token';
 import { LOCALE_PROVIDER } from './injection/LocaleProvider.token';
 import { LocaleService } from './services/locale.service';
+import { i18nModule } from './translate.module';
+import { TranslateModule } from '@ngx-translate/core';
 export { LocaleService };
 export { DEFAULT_LOCALE, LOCALES, LOCALE_PROVIDER };
-var KioNg2i18nModule = (function () {
+var KioNg2i18nModule = /** @class */ (function () {
     function KioNg2i18nModule() {
     }
     KioNg2i18nModule.decorators = [
         { type: NgModule, args: [{
-                    imports: [CommonModule],
-                    //declarations: [],
+                    imports: [CommonModule, i18nModule],
+                    declarations: [],
                     providers: [
                         {
                             provide: LOCALES,
@@ -24,8 +26,8 @@ var KioNg2i18nModule = (function () {
                         },
                         LocaleService
                     ],
-                    //entryComponents: [],
-                    exports: [CommonModule]
+                    entryComponents: [],
+                    exports: [CommonModule, TranslateModule]
                 },] },
     ];
     /** @nocollapse */

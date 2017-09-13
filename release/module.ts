@@ -5,13 +5,15 @@ import { LOCALES } from './injection/Locale.token'
 import { LOCALE_PROVIDER } from './injection/LocaleProvider.token'
 import { LocaleProvider } from './interfaces/LocaleProvider' 
 import { LocaleService } from './services/locale.service' 
+import { i18nModule } from './translate.module'
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
 export { LocaleService }
 export { DEFAULT_LOCALE, LOCALES, LOCALE_PROVIDER }
 
 @NgModule({
-  imports: [CommonModule],
-  //declarations: [],
+  imports: [CommonModule,i18nModule],
+  declarations: [],
   providers: [ 
     {
       provide: LOCALES,
@@ -23,8 +25,8 @@ export { DEFAULT_LOCALE, LOCALES, LOCALE_PROVIDER }
     },
     LocaleService    
   ],
-  //entryComponents: [],
-  exports: [CommonModule]
+  entryComponents: [],
+  exports: [CommonModule,TranslateModule]
 })
 export class KioNg2i18nModule {
 
