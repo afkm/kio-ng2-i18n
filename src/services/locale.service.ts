@@ -3,7 +3,6 @@ import { LocaleProvider } from '../interfaces/LocaleProvider'
 import { DEFAULT_LOCALE } from '../injection/DefaultLocale.token'
 import { LOCALES } from '../injection/Locale.token'
 import { TranslateService } from '@ngx-translate/core'
-import 'rxjs/add/operator/startWith'
 
 @Injectable()
 export class LocaleService {
