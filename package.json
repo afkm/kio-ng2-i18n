@@ -33,8 +33,6 @@
     "@angular/http": "^4.2.3",
     "@angular/platform-browser": "^4.2.3",
     "@angular/platform-browser-dynamic": "^4.2.3",
-    "@ngx-translate/core": "6.0.1",
-    "@ngx-translate/http-loader": "0.0.3",
     "@compodoc/compodoc": "^1.0.0-beta.12",
     "@types/chai": "^4.0.1",
     "@types/mocha": "^2.2.41",
@@ -56,11 +54,13 @@
     "@angular/http": "~4.2.3",
     "@angular/platform-browser": "~4.2.3",
     "@angular/platform-browser-dynamic": "~4.2.3",
-    "@ngx-translate/core": "6.0.1",
-    "@ngx-translate/http-loader": "0.0.3",
     "rxjs": "~5.4.2",
     "zone.js": "~0.8.13"
   },
   "author": "matthias@afkm.io",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@ngx-translate/core": "6.0.1",
+    "@ngx-translate/http-loader": "0.0.3"    
+  }
 }
