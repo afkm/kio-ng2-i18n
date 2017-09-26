@@ -1,9 +1,9 @@
 {
   "name": "kio-ng2-i18n",
   "version": "0.0.2",
-  "main": "./release",
-  "module": "./release/module.js",
-  "typings": "./release/module.d.ts",
+  "main": "./release/i18n.module",
+  "module": "./release/i18n.module",
+  "typings": "./release/i18n.module.d.ts",
   "scripts": {
     "test": "ts-mocha ./src/**/*.spec.ts",
     "pretest": "npm run build",
@@ -16,8 +16,7 @@
     "transpile": "npm run ngModule:build",
     "ngModule:build": "./scripts/ngModule.sh build",
     "build": "npm run ngModule:build",
-    "sync": "./scripts/sync.sh",
-    "build:release": "NODE_ENV=production npm run build && npm run sync",
+    "build:release": "NODE_ENV=production npm run build",
     "build:release:watch": "./scripts/watch.sh build:release"
   },
   "repository": {

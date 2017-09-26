@@ -14,7 +14,7 @@
   },
 
   "files": [
-    "build/index.ts"
+    "build/i18n.module.ts"
   ],
 
   "angularCompilerOptions": {

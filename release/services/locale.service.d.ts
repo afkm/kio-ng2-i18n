@@ -1,6 +1,6 @@
+import 'rxjs/add/operator/startWith';
 import { EventEmitter } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import 'rxjs/add/operator/startWith';
 export declare class LocaleService {
     readonly defaultLocale: string;
     readonly localesSupported: string[];

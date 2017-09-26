@@ -1,3 +1,4 @@
+import { ModuleWithProviders } from '@angular/core'
 import { Http } from '@angular/http'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
@@ -10,7 +11,7 @@ export function createTranslateLoader(http: Http) {
 }
 
 
-export const i18nModule = TranslateModule.forRoot(
+export const i18nModule:ModuleWithProviders = TranslateModule.forRoot(
   {
     loader: {
       provide: TranslateLoader,

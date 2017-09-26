@@ -1,3 +1,5 @@
+import 'rxjs/add/operator/startWith'
+
 import { Injectable, Inject, EventEmitter } from '@angular/core'
 import { LocaleProvider } from '../interfaces/LocaleProvider'
 import { DEFAULT_LOCALE } from '../injection/DefaultLocale.token'
@@ -29,7 +31,7 @@ export class LocaleService {
     return this.currentLocale
   }
 
-  private translateSubscription=this.changes.startWith(this.defaultLocale).subscribe ( locale => {
+  private translateSubscription=this.changes.startWith(this.defaultLocale).subscribe ( (locale:string) => {
     this.translateService.use(locale.substr(0,2))
   } )
 

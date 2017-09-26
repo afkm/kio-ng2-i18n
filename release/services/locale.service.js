@@ -1,8 +1,8 @@
+import 'rxjs/add/operator/startWith';
 import { Injectable, Inject, EventEmitter } from '@angular/core';
 import { DEFAULT_LOCALE } from '../injection/DefaultLocale.token';
 import { LOCALES } from '../injection/Locale.token';
 import { TranslateService } from '@ngx-translate/core';
-import 'rxjs/add/operator/startWith';
 var LocaleService = /** @class */ (function () {
     function LocaleService(defaultLocale, localesSupported, translateService) {
         var _this = this;
