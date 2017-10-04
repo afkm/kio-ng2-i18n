@@ -4,4 +4,6 @@
 
 *.ngfactory.ts
 
-documentation
+/documentation
+
+/test_app
