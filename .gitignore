@@ -1,4 +1,8 @@
 /aot
 
 release/**/*.ngfactory.ts
+
 node_modules
+
+
+/test_app
