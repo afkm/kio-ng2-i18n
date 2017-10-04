@@ -1,6 +1,6 @@
 {
   "name": "kio-ng2-i18n",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./release/i18n.module",
   "module": "./release/i18n.module",
   "typings": "./release/i18n.module.d.ts",
